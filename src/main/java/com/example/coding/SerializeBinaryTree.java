@@ -8,23 +8,26 @@ public class SerializeBinaryTree {
 	   public String serialize(TreeNode root) {
 	    	if (root==null)
 	    		return "";
-	        return inOrderSerialize(root);
+	    	StringBuffer sol = inOrderSerialize(root);
+	        return sol.toString();
 	    }
 
-	    private String inOrderSerialize(TreeNode root) {
+	    private StringBuffer inOrderSerialize(TreeNode root) {
 	    	
-	    	String str = ","+root.val + "";
+	    	StringBuffer str = new StringBuffer(); 
+	    	str.append(",");
+	    	str.append(root.val);
 	    	
 	    	if(root.left == null) {
-	    		str = str + ",A";
+	    		str = str.append(",A");
 	    	} else {
-	    		str = str + inOrderSerialize(root.left);
+	    		str = str.append(inOrderSerialize(root.left));
 	    	}
 	    	
 	    	if(root.right == null) {
-	    		str = str + ",A";
+	    		str = str.append(",A");
 	    	} else {
-	    		str = str + inOrderSerialize(root.right);
+	    		str = str.append(inOrderSerialize(root.right));
 	    	}
 	 
 			return str;
@@ -32,7 +35,6 @@ public class SerializeBinaryTree {
 
 		// Decodes your encoded data to tree.
 	    public TreeNode deserialize(String data) {
-	    	
 	    	String[] tree = data.split(",");
 	    	if(data.length()==0)
 	    		return null;
