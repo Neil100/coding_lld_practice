@@ -3,6 +3,10 @@ package com.example.coding;
 public class Solution {
 
     public static void main(String[] str) {
+        System.out.println("BBBBB");
+        System.out.println('\n'-'0'+'0');
+        System.out.println("AAAAA");
+        /*
         Solution sol = new Solution();
         System.out.println(sol.reverse(1534236469));
         
@@ -12,6 +16,7 @@ public class Solution {
         MinMeetingRooms meetingRooms = new MinMeetingRooms();
         int[][] arr = {{1,10}, {4, 15}};
         System.out.println(meetingRooms.minMeetingRooms(arr));
+         */
     }
 
     public int reverse(int x) {
