@@ -29,6 +29,6 @@ class MedianFinder {
     }
 
     public double findMedian() {
-        return maxPQ.size() > minPQ.size() ? maxPQ.peek() : (double) maxPQ.peek()+ (double)minPQ.peek())/2;
+        return maxPQ.size() > minPQ.size() ? maxPQ.peek() : ((double) maxPQ.peek() + (double)minPQ.peek())/2;
     }
 }
